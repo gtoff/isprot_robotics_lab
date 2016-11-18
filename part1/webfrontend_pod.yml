@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webfrontend
+  labels:
+    name: webfrontend
+spec:
+  containers:
+    - name: webfrontend
+      image: robopaas/webfrontend:latest
+      ports:
+        - containerPort: 80
+          name: web
+        - containerPort: 9090
+          name: rosbridge
+      env:
+        - name: ROSBRIDGE_URL
+          value: 104.197.14.17:9090

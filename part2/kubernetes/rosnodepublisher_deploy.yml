@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: rosnodepublisher-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: rosnodepublisher
+      labels:
+        name: rosnodepublisher
+    spec:
+      containers:
+      - name: rosnodepublisher
+        image: robopaas/rosnodeinfo:latest
+        env:
+        - name: GIT_REPO
+          value: https://github.com/serviceprototypinglab/roboticLab.git
+        - name: ROS_MASTER_URI
+          value: http://master:11311
+        - name: ROS_HOSTNAME
+          value: rosnodepublisher
