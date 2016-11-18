@@ -11,12 +11,12 @@ for example, run sudo su -
 A new apt-key is needed for downloading and installing the kubectl package. Use the commands to below add the keys and install kubectl. 
 
 
-   curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-   cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
-   deb http://apt.kubernetes.io/ kubernetes-xenial main
-   EOF
-   apt-get update
-   apt-get install -y kubectl
+    curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+    cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
+    deb http://apt.kubernetes.io/ kubernetes-xenial main
+    EOF
+    apt-get update
+    apt-get install -y kubectl
 
 * Copy the kubernetes config file from OLAT to /home/<your user>/.kube/
 * Copy the google app credentials from OLAT, the file is called: ISPROT-Collab-8b086947beba.json
@@ -48,7 +48,7 @@ Test that your namespace is empty:
 * Clone the provided git repository with the kubernetes templates needed. 
 
 
-    Git clone <url>
+    Git clone https://github.com/gtoff/isprot_robotics_lab.git
 
 * In the cloned repo there are two folders, one for each part of the exercise. 
 
