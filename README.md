@@ -32,12 +32,12 @@ You should now be able to run “kubectl cluster-info” in a terminal. It shoul
 Set namespace to your namespace by setting a local context:
 
     
-    kubectl config set-context local --namespace=groupX
+    kubectl config set-context gke_isprot-collab_us-central1-a_cluster-isprot --namespace=groupX
 
 Use the local context you created:	
 
 
-    kubectl config use-context local
+    kubectl config use-context gke_isprot-collab_us-central1-a_cluster-isprot
 
 Test that your namespace is empty:
 
